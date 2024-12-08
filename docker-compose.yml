@@ -1,0 +1,17 @@
+services:
+  product_backend:
+    container_name: product_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - product_network
+
+networks:
+  product_network:
+    driver: bridge
+    name: product_api_net
+
+
