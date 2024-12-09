@@ -1,5 +1,6 @@
 services:
   product_backend:
+    image: aimejean/product-backend:1.0
     container_name: product_backend
     build:
       context: .
