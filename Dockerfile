@@ -8,4 +8,4 @@ COPY ${JAR_FILE}  /app/product.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","/app/product.jar"]
+ENTRYPOINT ["java","-jar", "-Dspring.profiles.active=docker", "/app/product.jar"]
